@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>E-Learning Application</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+        <link href="https://fonts.googleapis.com/css?family=Heebo:400,700&display=swap&subset=hebrew" rel="stylesheet">
+        <link rel="stylesheet" href="Content/Site.css">
+        <link rel="stylesheet" href="Content/signup.css">
+        <script src="Content/js/jquery-3.0.0.js"></script>
+        <script src="Content/js/signup.js"></script>
+        <script>
+        function removeRegisterPageErrorMsg(obj, event){
+            if (event.keyCode == 13) { 
+                NextStepBtn();
+            }else{
+                $(obj).closest('.section-form-element').removeClass('invalid section-form-valid ');
+            } 
+        }
+        </script>
+    </head>
+    <body>
+        <div class="main-wrapper-panel">
+            <section class="container">
+                <div class="container-column">
+                    <div class="section-account-container">
+                        <div class="navbar-logo"><a href="/"></a></div>
+                        <div class="section-account-wrapper">
+                            <a class="section-account-back-btn" href="javascript:goBackToFirstFold()" style="display: none;">
+                                <img src="Content/images/blackarrow-icon.svg">
+                                <span>Back</span>
+                            </a>
+                            <div class="section-account-main-box">
+                                <div class="section-account-main-header">Welcome to 360 life!</div>
+                                <div class="section-account-subinfo">Set up your profile</div>
+                                <div class="section-account-form-info">
+                                    <form id="registerForm" method="post">
+                                        <div class="section-form-first-fold">
+                                            <div class="section-form-element">
+                                                <label for="userEmailid">EMAIL</label>
+                                                <input type="email" class="section-form-control" onblur="checkEmailValidation(this)" onkeyup="removeRegisterPageErrorMsg(this, event)" id="userEmailid" name="userEmailid" placeholder="Email" tabindex="1">
+                                                <div class="section-form-error">Please enter a valid email id</div>
+                                            </div>
+                                            <div class="section-form-element">
+                                                <label for="userFname">First name</label>
+                                                <input type="text" class="section-form-control" onblur="checkNameValidation(this)" onkeyup="removeRegisterPageErrorMsg(this, event)" id="userFname" name="userFname" placeholder="First name" tabindex="2">
+                                                <div class="section-form-error">Please enter a valid first name</div>
+                                            </div>
+                                            <div class="section-form-element">
+                                                <label for="userLname">Last name</label>
+                                                <input type="text" class="section-form-control" onblur="checkNameValidation(this)" onkeyup="removeRegisterPageErrorMsg(this, event)" id="userLname" name="userLname" placeholder="Last name" tabindex="3">
+                                                <div class="section-form-error">Please enter a valid last name</div>
+                                            </div>
+                                            <div class="section-form-element">
+                                                <label for="userDesignation">Position</label>
+                                                <input type="text" class="section-form-control" onblur="checkNameValidation(this)" onkeyup="removeRegisterPageErrorMsg(this, event)" id="userDesignation" name="userDesignation" placeholder="Position at the company" tabindex="4">
+                                                <div class="section-form-error">Please enter a valid position</div>
+                                            </div>
+                                            <div class="section-form-btn">
+                                                <a href="javascript:NextStepBtn()" id="nextStepBtn" class="primary-btn yellow-btn" tabindex="5">Next</a>
+                                            </div>
+                                        </div>
+                                        <div class="section-form-second-fold" style="display: none;">
+                                            <div class="section-form-element">
+                                                <label for="userPassword">Password</label>
+                                                <input type="password" autocomplete="off" maxlength="20" class="section-form-control" onblur="checkPasswordValidation(this)" onkeyup="removeErrorMsg(this, event)" id="userPassword" name="userPassword" placeholder="Password" tabindex="1">
+                                                <div class="section-form-error">Please enter your Password</div>
+                                            </div>
+                                            <div class="section-form-element">
+                                                <label for="userCnfPassword">Password again</label>
+                                                <input type="password" autocomplete="off" maxlength="20" class="section-form-control" onblur="confirmPasswordValidation(this)" onkeyup="removeErrorMsg(this, event)" oncopy="return false" id="userCnfPassword" name="userCnfPassword" placeholder="Password again" tabindex="2">
+                                                <div class="section-form-error">Please enter your Password</div>
+                                            </div>
+                                            <div class="section-form-btn">
+                                                <input type="submit" id="registerBtn" class="primary-btn yellow-btn" value="Let’s go!" onclick="return validateRegisterForm()" tabindex="3"/>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </body>
+</html>

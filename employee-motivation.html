@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>E-Learning Application</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+        <link href="https://fonts.googleapis.com/css?family=Heebo:400,700&display=swap&subset=hebrew" rel="stylesheet">
+        <link rel="stylesheet" href="Content/Site.css">
+        <link rel="stylesheet" href="Content/progress-bar.css">
+        <link rel="stylesheet" href="Content/content.css">
+        <script src="Content/js/jquery-3.0.0.js"></script>
+    </head>
+<body>
+    <div class="page-wrapper">
+        <header class="navbar-container">
+            <div class="navbar-container-wrapper">
+                <div class="container" id="topbar">
+                    <div class="container-column navbar-wrapper">
+                        <div class="navbar-wrapper-info">
+                            <div class="navbar-logo"><a href="#"></a></div>
+                            <div class="navbar-notification" onclick="openAccountSettingPanel(this, event)">
+                                <span class="navbar-notification-icon"></span>
+                                <span class="navbar-notification-info">NOTIFICATIONS</span>
+                                <span class="navbar-notification-count">1</span>
+                                <div class="navbar-widget navbar-notification-wrapper" style="display: none;">
+                                    <div class="navbar-notification-widget clearfix">
+                                        <div>
+                                            <div class="navbar-notification-widget-text unread-notification">You just completed the <span>Principles Made Practical module</span>
+                                            </div>
+                                            <div class="navbar-notification-widget-text unread-notification">You’re <span>halfway</span> at completing all your modules! Congrats!
+                                            </div>
+                                            <div class="navbar-notification-widget-text">You just completed the <span>Staff Development topic</span>
+                                            </div>
+                                        </div>
+                                        <div class="navbar-notification-clear">Clear all</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="navbar-profile">
+                            <div onclick="openAccountSettingPanel(this, event)">
+                                <img class="navbar-profile-logo" src="Content/images/dan.jpg"/>
+                                <span class="navbar-profile-name">Daniel</span>
+                                <div class="navbar-widget" style="display: none;">
+                                    <ul class="navbar-widget-list">
+                                        <li><a href="profile.html">Profile</a></li>
+                                        <li><a href="settings.html">Settings</a></li>
+                                        <li><a href="javascript:void(0)">Logout</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>                                                                    
+        </header>
+        <div class="main-wrapper-panel">
+            <section class="container-highlight"></section> 
+            <div class="discussion-sidebar-container sidebar-animate-right" id="dvDiscussionSidebar" style="display: none;">
+                <div class="discussion-sidebar-close-icon" onclick="fnCloseDiscussionBox()"></div>
+                <div class="discussion-sidebar-info">
+                    <div class="discussion-sidebar-header">Discussion</div>
+                    <div>Share your thoughts with the team!</div>
+                </div>
+                <div class="discussion-sidebar-main-chat">
+
+                </div>
+                <div class="discussion-sidebar-textbox">
+                    <textarea class="discussion-sidebar-input" placeholder="What’s on your mind?"></textarea>
+                    <span>Send</span>
+                </div>
+            </div>
+            <div class="main-wrapper-panel-header panel-white">
+                <section class="container">
+                    <div class="container-column">
+                        <div class="section-header-main">
+                            <div class="section-header-box">
+                                <a href="#" class="section-back-btn"><span></span><span class="section-back-btn-text">Back to Modules</span></a>
+                                <h2 class="section-header-text align-c">Employee motivation</h2>
+                                <a href="javascript:void(0)" class="section-discussion-btn" onclick="fnOpenDiscussionBox(event)">
+                                    <span class="section-discussion-btn-icon"></span><span class="section-discussion-btn-txt">DISCUSSION</span>
+                                </a>
+                            </div>
+                            <div class="section-header-subtext align-c">Module</div>
+                            <div class="section-progress-wrapper">
+                                <div class="section-progress-info clearfix">
+                                    <div class="section-progress-label float-l">
+                                        <span class="section-progress-output">10</span><span class="section-progress-desc">of</span><span class="section-progress-total">100</span> modules completed
+                                    </div>
+                                    <div class="section-progress-icon float-r"></div>
+                                </div>
+                                <div class="section-progress-box">
+                                    <div id="progressBar" class="section-progress-range"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="main-wrapper-panel-body">
+                <section class="container">
+                    <div class="container-column">
+                        <div class="section-container-main">
+                            <div class="section-content-header">
+                                <div class="section-para-head">Overview</div>
+                                <div class="section-para-info">In the Employee motivation module, we’ll guide you through a number of techniques that you can use to keep yourself motivated. As a result, you’ll hopefully stay much more motivated in your office and will have more fun.</div>
+                            </div>
+                            <div class="section-content-card-wrapper">
+                                <a href="#" class="section-content-card">
+                                    <span class="card-item-parent">
+                                        <span class="section-content-card-item card-video"></span>
+                                        <span class="section-card-name">video</span>
+                                    </span>
+                                    <span class="section-content-card-desc">
+                                        <span>Goal setting</span>
+                                        <span>If we speak about motivation, setting goals is crucial.</span>
+                                    </span>
+                                    <span class="section-content-card-status tick-icon"></span>
+                                </a>
+                                <a href="#" class="section-content-card card-disabled">
+                                    <span class="card-item-parent">
+                                        <span class="section-content-card-item card-video"></span>
+                                        <span class="section-card-name">video</span>
+                                    </span>
+                                    <span class="section-content-card-desc">
+                                        <span>Psychology of motivation part 1</span>
+                                        <span>Understanding the psychology behind the motivation can be the key.</span>
+                                    </span>
+                                    <span class="section-content-card-status"></span>
+                                </a>
+                                <a href="#" class="section-content-card card-disabled">
+                                    <span class="card-item-parent">
+                                        <span class="section-content-card-item card-pdf"></span>
+                                        <span class="section-card-name">pdf</span>
+                                    </span>
+                                    <span class="section-content-card-desc">
+                                        <span>Stay positive, stay motivated</span>
+                                        <span>How constantly stay motivated.</span>
+                                    </span>
+                                    <span class="section-content-card-status lock-icon"></span>
+                                </a>
+                                <a href="#" class="section-content-card card-disabled">
+                                    <span class="card-item-parent">
+                                        <span class="section-content-card-item card-video"></span>
+                                        <span class="section-card-name">video</span>
+                                    </span>
+                                    <span class="section-content-card-desc">
+                                        <span>Psychology of motivation part 2</span>
+                                        <span>Understanding the psychology behind the motivation can be the key.</span>
+                                    </span>
+                                    <span class="section-content-card-status lock-icon"></span>
+                                </a>
+                                <a href="#" class="section-content-card card-disabled">
+                                    <span class="card-item-parent">
+                                        <span class="section-content-card-item card-survey"></span>
+                                        <span class="section-card-name">survey</span>
+                                    </span>
+                                    <span class="section-content-card-desc">
+                                        <span>Daily habits, that can increase mindfulness</span>
+                                        <span>How to increase mindfulness with daily habits?</span>
+                                    </span>
+                                    <span class="section-content-card-status lock-icon"></span>
+                                </a>
+                                <a href="#" class="section-content-card card-disabled">
+                                    <span class="card-item-parent">
+                                        <span class="section-content-card-item card-flashcard"></span>
+                                        <span class="section-card-name">flashcard</span>
+                                    </span>
+                                    <span class="section-content-card-desc">
+                                        <span>Daily habits, that can increase mindfulness</span>
+                                        <span>How to increase mindfulness with daily habits?</span>
+                                    </span>
+                                    <span class="section-content-card-status lock-icon"></span>
+                                </a>
+                                <a href="#" class="section-content-card card-disabled">
+                                    <span class="card-item-parent">
+                                        <span class="section-content-card-item card-quiz"></span>
+                                        <span class="section-card-name">quiz</span>
+                                    </span>
+                                    <span class="section-content-card-desc">
+                                        <span>Daily habits, that can increase mindfulness</span>
+                                        <span>How to increase mindfulness with daily habits?</span>
+                                    </span>
+                                    <span class="section-content-card-status lock-icon"></span>
+                                </a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="Content/js/script.js"></script>
+    <script src="Content/js/common.js"></script>
+</body>
+</html>

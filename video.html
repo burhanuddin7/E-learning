@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>E-Learning Application</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+        <link href="https://fonts.googleapis.com/css?family=Heebo:400,700&display=swap&subset=hebrew" rel="stylesheet">
+        <link rel="stylesheet" href="Content/Site.css">
+        <link rel="stylesheet" href="Content/video.css">
+        <script src="Content/js/jquery-3.0.0.js"></script>
+    </head>
+<body>
+    <div class="page-wrapper">
+        <header class="navbar-container">
+            <div class="navbar-container-wrapper">
+                <div class="container" id="topbar">
+                    <div class="container-column navbar-wrapper">
+                        <div class="navbar-wrapper-info">
+                            <div class="navbar-logo"><a href="#"></a></div>
+                            <div class="navbar-notification" onclick="openAccountSettingPanel(this, event)">
+                                <span class="navbar-notification-icon"></span>
+                                <span class="navbar-notification-info">NOTIFICATIONS</span>
+                                <span class="navbar-notification-count">1</span>
+                                <div class="navbar-widget navbar-notification-wrapper" style="display: none;">
+                                    <div class="navbar-notification-widget clearfix">
+                                        <div>
+                                            <div class="navbar-notification-widget-text unread-notification">You just completed the <span>Principles Made Practical module</span>
+                                            </div>
+                                            <div class="navbar-notification-widget-text unread-notification">You’re <span>halfway</span> at completing all your modules! Congrats!
+                                            </div>
+                                            <div class="navbar-notification-widget-text">You just completed the <span>Staff Development topic</span>
+                                            </div>
+                                        </div>
+                                        <div class="navbar-notification-clear">Clear all</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="navbar-profile">
+                            <div onclick="openAccountSettingPanel(this, event)">
+                                <img class="navbar-profile-logo" src="Content/images/dan.jpg"/>
+                                <span class="navbar-profile-name">Daniel</span>
+                                <div class="navbar-widget" style="display: none;">
+                                    <ul class="navbar-widget-list">
+                                        <li><a href="profile.html">Profile</a></li>
+                                        <li><a href="settings.html">Settings</a></li>
+                                        <li><a href="javascript:void(0)">Logout</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                </div> 
+            </div>                                                                
+        </header>
+        <div class="main-wrapper-panel">
+            <section class="container-highlight"></section>  
+            <div class="discussion-sidebar-container sidebar-animate-right" id="dvDiscussionSidebar" style="display: none;">
+                <div class="discussion-sidebar-close-icon" onclick="fnCloseDiscussionBox()"></div>
+                <div class="discussion-sidebar-info">
+                    <div class="discussion-sidebar-header">Discussion</div>
+                    <div>Share your thoughts with the team!</div>
+                </div>
+                <div class="discussion-sidebar-main-chat">
+
+                </div>
+                <div class="discussion-sidebar-textbox">
+                    <textarea class="discussion-sidebar-input" placeholder="What’s on your mind?"></textarea>
+                    <span>Send</span>
+                </div>
+            </div>
+            <div class="main-wrapper-panel-header">
+                <section class="container">
+                    <div class="container-column">
+                        <div class="section-header-main">
+                            <div class="section-header-box section-video-box">
+                                <a href="#" class="section-back-btn"><span></span><span class="section-back-btn-text">Back to Topics</span></a>
+                                <div class="section-video-container">
+
+                                    <video id="dvVideoPlayer" class="section-video-main" autobuffer controls height="100%" width="100%">
+                                        <source src="" type="video/mp4">
+                                    </video>
+
+                                    <iframe id="dvIframeVideo" style="display: none;"
+                                        width="100%" height="100%" src=""
+                                        frameborder="0" allowfullscreen>
+                                    </iframe>
+
+                                    <div class="section-video-overlay">
+                                        <div class="section-video-buffer">
+                                            <div class="section-video-arrow"></div>
+                                        </div>
+                                        <div class="section-video-rating">
+                                            <div class="section-video-rating-info">
+                                                <div class="section-video-header">How did you like the video?</div>
+                                                <div class="section-video-rating-box">
+                                                    <div class="section-video-rating-list"> 
+                                                        <div class="section-video-rating-icon">
+                                                            <span class="rating-love-icon"></span>
+                                                        </div>
+                                                        <div>Love it!</div>
+                                                    </div>
+
+                                                    <div class="section-video-rating-list"> 
+                                                        <div class="section-video-rating-icon">
+                                                            <span class="rating-like-icon"></span>
+                                                        </div>
+                                                        <div>Like it!</div>
+                                                    </div>
+
+                                                    <div class="section-video-rating-list"> 
+                                                        <div class="section-video-rating-icon">
+                                                            <span class="rating-meh-icon"></span>
+                                                        </div>
+                                                        <div>Meh</div>
+                                                    </div>
+
+                                                    <div class="section-video-rating-list"> 
+                                                        <div class="section-video-rating-icon">
+                                                            <span class="rating-dislike-icon"></span>
+                                                        </div>
+                                                        <div>Didn't like it!</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="section-video-completion">
+                                            <div class="section-video-message">
+                                                <div>Congratulations!</div>
+                                                <div class="section-video-message-info">You completed this video</div>
+                                                <div class="section-video-next-info">
+                                                    <p>Up next:</p>
+                                                    <img src="Content/images/dummy.jpg" width="300" height="170" alt="Dummy Image"/>
+                                                    <p>Psychology of Motivation I.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="javascript:void(0)" class="section-discussion-btn" onclick="fnOpenDiscussionBox(event)">
+                                    <span class="section-discussion-btn-icon"></span><span class="section-discussion-btn-txt">DISCUSSION</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="section-video-main-text">
+                            <div class="section-video-text-header">Goal setting - How to get over obstacles?</div>
+                            <div>In this video, we’ll go through the basics of goal setting. Goals are an important aspect of motivation and can help you a lot in the long-term.</div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        
+    </div>
+    
+    <script src="Content/js/video.js?k=12"></script>
+    <script src="Content/js/common.js?k=12"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+Points to correct:-
+
+- Structure changes in video page along with changes in css for video page.
+
+- Completion message (Upnext section for quiz) 3 divs in flashcard page. and css in site.css
+
+- login setup for all pages with css
+
+- NOtification ans setting structure in index page with css in site.css and common.js
+
+- changes in content.css
+
+- (By default fixed header with animation)Header changes stuck class added in site.css and common js
+  css changes in signup.css where sticky header is not req 
+
+- when sticky header not req top of section container will be zero (main-wrapper-panel)
+
+- Error mess of no internet on index page ( Red strip message of no internet)
+
+-**** Main structure changes of section highlighter in main wrapper panel on all pages*****
+
+- Profile page , settings page and Change password page has settings.js and profile-setting.css in common along with signup.js
+
+-Very Imp ********
+Changes in validation code in js (signup and settings)
+Changes in files like login, register, forget, change, settings
+On enter key validation done and validation on submit
+
+- Changes in popup section on profile page with css and js made separately in modal js and css(only site.css req for external loading of popup)
+

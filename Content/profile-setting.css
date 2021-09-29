@@ -1,0 +1,266 @@
+.section-container-main.profile-section-container, .profile-section-info, .profile-section-listbox{padding-bottom: 60px;}
+.profile-section-pic img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+.profile-section-name, .profile-section-pic {
+    display: inline-block;
+    vertical-align: middle;
+}
+.profile-section-name>span{
+    display: block;
+    font-weight: 700;
+    font-size: 30px;
+    padding: 0 0 8px;
+}
+.profile-section-title{
+    color: rgba(0, 0, 0, .5);
+    font-size: 24px;
+    font-weight: 700;
+    padding: 0 0 5px;
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(0, 0, 0, .15);
+}
+.profile-section-item{
+    font-size: 18px;
+    font-weight: 700;
+    padding: 25px 0 0px;
+}
+.profile-section-list-child, .personal-section-list-child{
+    text-align: center;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: top;
+    width: calc(20% - 30px);
+    margin-right: 35px;
+}
+.profile-section-list-parent{
+    font-size: 0px;
+    padding: 40px 0 20px;
+}
+.profile-section-list-child img {
+    max-width: 90px;
+    max-height: 90px;
+}
+.personal-section-item{
+    color: #444444;
+    padding: 20px 0 0;
+    display: block;
+}
+.personal-section-list-parent{padding: 40px 0 20px;}
+.personal-section-list-child {
+    width: 140px;
+    margin-right: 30px;
+}
+.personal-section-list-child .common-shadow-box{
+    height: 100px;
+    width: 80px;
+    margin: auto;
+}
+span.personal-pdf-section {
+    color: #FF4141;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 30px 0 0;
+    display: block;
+    text-transform: uppercase;
+}
+span.personal-section-name {
+    color: #444;
+    font-size: 10px;
+    display: block;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 5px 0 0;
+}
+.personal-flashcard-icon {
+    background: url(images/completion-flashcard-icon.svg) no-repeat center;
+    display: inline-block;
+    background-size: 60px;
+    width: 50px;
+    height: 50px;
+    background-position: -6px 6px;
+    margin: 12px 0 0;
+}
+.personal-video-icon {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    margin: 20px 0 8px;
+    border: 1px solid #414A94;
+    border-radius: 50%;
+    position: relative;
+}
+.personal-video-icon::after{
+    content: '';
+    position: absolute;
+    top: 8px;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 15px solid #414A94;
+    left: 11px;
+}
+.personal-section-list-parent .personal-section-list-child:last-child , .profile-section-list-parent .profile-section-list-child:last-child{margin-right: 0;}
+
+/*change password css*/
+.section-form-main-fold{
+    margin: auto;
+    padding: 30px 0 60px;
+    max-width: 300px;
+}
+.section-form-element {
+    margin: 0 0 30px;
+    text-align: left;
+    position: relative;
+}
+.section-form-element>label {
+    font-size: 14px;
+    text-transform: uppercase;
+    display: block;
+    margin: 0 0 8px;
+}
+.section-form-valid>label {
+    color: #7F7F7F;
+}
+.section-form-control {
+    outline: none;
+    color: #7F7F7F;
+    font-size: 18px;
+    line-height: 1.5;
+    border: none;
+    background: transparent;
+    width: 100%;
+    padding: 0px 10px 0px 0px;
+    border-bottom: 2px solid rgba(127, 127, 127, .7);
+}
+.section-form-error {
+    display: none;
+}
+.section-form-element.invalid .section-form-error {
+    display: block;
+    color: #F74E35;
+    position: absolute;
+    bottom: -20px;
+    width: 100%;
+    font-size: 13px;
+}
+.section-form-btn {
+    padding: 30px 0 0;
+    text-align: center;
+}
+.section-form-btn .primary-btn {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    letter-spacing: 0;
+}
+/*change pass css ends here*/
+
+/*Settings page css starts here*/
+.section-form-main-fold.setting-section-form-wrapper{
+    margin: auto;
+    padding: 20px 0 60px;
+    max-width: 410px;
+}
+.setting-section-tabs{
+    padding: 5px 12px;
+    float: left;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+}
+.setting-section-tabs:before {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    background: #000;
+    height: 2px;
+    -webkit-transition-property: left,right;
+    transition-property: left,right;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+.setting-section-tabs.active-setting-tab{pointer-events: none;}
+.setting-section-tabs.active-setting-tab:before, .setting-section-tabs:hover:before {
+    left: 0;
+    right: 0;
+}
+.section-form-anchor{
+    font-size: 18px;
+    text-decoration: underline;
+    display: inline-block;
+    color: #000;
+    padding: 5px 0 0;
+}
+.setting-section-tab-info{
+    padding: 30px 0 0;
+}
+.section-form-btn.section-profile-btn{
+    padding: 50px 0 0;
+}
+.section-form-btn.section-profile-btn .primary-btn{width: 40%;}
+.section-form-element input[type=file]{
+    display: none;
+}
+.section-form-banner-box{
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    display: block;
+}
+.section-form-element .black-transparent-btn{
+    display: inline-block;
+    cursor: pointer;
+    text-transform: inherit;
+    margin: 0 0 0px;
+}
+.section-notify-element{
+    position: relative;
+    margin: 0 0 30px;
+}
+.setting-section-tab-info .section-notify-element:nth-child(2){margin: 0 0 0;}
+.section-notify-checkbox {
+    display: none;
+}
+.section-notify-child label {
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+    font-size: 18px;
+    user-select: none;
+}
+.section-notify-info {
+    color: rgba(0, 0, 0, .5);
+    padding: 8px 0 0;
+}
+.section-notify-checkbox + .section-notify-child-label::before {
+    content: '';
+    border: 1px solid #000;
+    display: inline-block;
+    vertical-align: middle;
+    width: 22px;
+    height: 22px;
+    margin-right: 10px;
+}
+.section-notify-checkbox:checked + .section-notify-child-label::after {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 13px;
+    border: solid #15BC7F;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    top: 4px;
+    left: 8px;
+}
+/*ends here*/

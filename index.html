@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>E-Learning Application</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+        <link href="https://fonts.googleapis.com/css?family=Heebo:400,700&display=swap&subset=hebrew" rel="stylesheet">
+        <link rel="stylesheet" href="Content/Site.css">
+        <link rel="stylesheet" href="Content/progress-bar.css">
+        <link rel="stylesheet" href="Content/modules.css">
+        <script src="Content/js/jquery-3.0.0.js"></script>
+    </head>
+<body>
+    <div class="page-wrapper">
+        <header class="navbar-container">
+            <div class="navbar-container-wrapper">
+                <div class="container" id="topbar">
+                    <div class="container-column navbar-wrapper">
+                        <div class="navbar-wrapper-info">
+                            <div class="navbar-logo"><a href="#"></a></div>
+                            <div class="navbar-notification" onclick="openAccountSettingPanel(this, event)">
+                                <span class="navbar-notification-icon"></span>
+                                <span class="navbar-notification-info">NOTIFICATIONS</span>
+                                <span class="navbar-notification-count">1</span>
+                                <div class="navbar-widget navbar-notification-wrapper" style="display: none;">
+                                    <div class="navbar-notification-widget clearfix">
+                                        <div>
+                                            <div class="navbar-notification-widget-text unread-notification">You just completed the <span>Principles Made Practical module</span>
+                                            </div>
+                                            <div class="navbar-notification-widget-text unread-notification">You’re <span>halfway</span> at completing all your modules! Congrats!
+                                            </div>
+                                            <div class="navbar-notification-widget-text">You just completed the <span>Staff Development topic</span>
+                                            </div>
+                                        </div>
+                                        <div class="navbar-notification-clear">Clear all</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="navbar-profile">
+                            <div onclick="openAccountSettingPanel(this, event)">
+                                <img class="navbar-profile-logo" src="Content/images/dan.jpg"/>
+                                <span class="navbar-profile-name">Daniel Joy</span>
+                                <div class="navbar-widget" style="display: none;">
+                                    <ul class="navbar-widget-list">
+                                        <li><a href="profile.html">Profile</a></li>
+                                        <li><a href="settings.html">Settings</a></li>
+                                        <li><a href="javascript:void(0)">Logout</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                </div> 
+            </div>                                                               
+        </header>
+        <div class="section-warning-container">
+            <span class="section-warning-container-icon"></span><span>Seems you are not connected to the Internet</span>
+        </div>
+        <div class="main-wrapper-panel">
+            <section class="container-highlight"></section> 
+            <div class="main-wrapper-panel-header">
+                <section class="container">
+                    <div class="container-column">
+                        <div class="section-header-main">
+                            <div class="section-header-box">
+                                <a href="#" class="section-back-btn"><span></span><span class="section-back-btn-text">Back to Topics</span></a>
+                                <h2 class="section-header-text align-c">Hello, Daniel joy!</h2>
+                            </div>
+                            <div class="section-header-subtext align-c">Label</div>
+                            <div class="section-progress-wrapper">
+                                <div class="section-progress-info clearfix">
+                                    <div class="section-progress-label float-l">
+                                        <span class="section-progress-output">1</span><span class="section-progress-desc">of</span><span class="section-progress-total">7</span> modules completed
+                                    </div>
+                                    <div class="section-progress-icon float-r"></div>
+                                </div>
+                                <div class="section-progress-box">
+                                    <div id="progressBar" class="section-progress-range"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="main-wrapper-panel-body">
+                <section class="container">
+                    <div class="container-column">
+                        <div class="section-container-main" id="dvUnLockedModules">
+                            <div class="section-container-heading">Unlocked modules</div>
+                            <div class="section-container-box">
+                                <a href="#" class="section-container-item">
+                                    <span class="section-container-item-header">Introduction</span>
+                                    <span class="section-container-item-info">Small introduction of the different modules in this topic.</span>
+                                    <span class="section-container-item-count">
+                                        <span>2</span><span>/</span><span>8</span>
+                                    </span>
+                                    <span class="section-container-tick-icon" style="display: none;"></span>
+                                </a>
+                                <a href="employee-motivation.html" class="section-container-item">
+                                        <span class="section-container-item-header">Employee Motivation</span>
+                                        <span class="section-container-item-info">Different techniques to keep yourself motivated.</span>
+                                        <span class="section-container-item-count" style="display: none;">
+                                            <span>2</span><span>/</span><span>8</span>
+                                        </span>
+                                        <span class="section-container-tick-icon"></span>
+                                </a>
+                                <a href="#" class="section-container-item">
+                                    <span class="section-container-item-header">Introduction</span>
+                                    <span class="section-container-item-info">Small introduction of the different modules in this topic.</span>
+                                    <span class="section-container-item-count inactive">
+                                        <span>2</span><span>/</span><span>8</span>
+                                    </span>
+                                    <span class="section-container-tick-icon" style="display: none;"></span>
+                                </a>
+                                <a href="#" class="section-container-item">
+                                    <span class="section-container-item-header">Introduction</span>
+                                    <span class="section-container-item-info">Small introduction of the different modules in this topic.</span>
+                                    <span class="section-container-item-count">
+                                        <span>2</span><span>/</span><span>8</span>
+                                    </span>
+                                    <span class="section-container-tick-icon" style="display: none;"></span>
+                                </a>
+                                <a href="#" class="section-container-item">
+                                    <span class="section-container-item-header">Introduction</span>
+                                    <span class="section-container-item-info">Small introduction of the different modules in this topic.</span>
+                                    <span class="section-container-item-count">
+                                        <span>2</span><span>/</span><span>8</span>
+                                    </span>
+                                    <span class="section-container-tick-icon" style="display: none;"></span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="section-container-main section-container-inactive" id="dvLockedModules">
+                            <div class="section-container-heading">Locked modules</div>
+                            <div class="section-container-box">
+                                <a href="#" class="section-container-item">
+                                    <span class="section-container-item-header">Introduction</span>
+                                    <span class="section-container-item-info">Small introduction of the different modules in this topic.</span>
+                                    <span class="section-container-item-count" style="display: none;">
+                                        <span>2</span><span>/</span><span>8</span>
+                                    </span>
+                                    <span class="section-container-lock-icon"></span>
+                                </a>
+                                <a href="#" class="section-container-item">
+                                        <span class="section-container-item-header">Introduction</span>
+                                        <span class="section-container-item-info">Different techniques to keep yourself motivated.</span>
+                                        <span class="section-container-item-count" style="display: none;">
+                                            <span>2</span><span>/</span><span>8</span>
+                                        </span>
+                                        <span class="section-container-lock-icon"></span>
+                                </a>
+                                <a href="#" class="section-container-item">
+                                    <span class="section-container-item-header">Introduction</span>
+                                    <span class="section-container-item-info">Small introduction of the different modules in this topic.</span>
+                                    <span class="section-container-item-count" style="display: none;">
+                                        <span>2</span><span>/</span><span>8</span>
+                                    </span>
+                                    <span class="section-container-lock-icon"></span>
+                                </a>
+                                <a href="#" class="section-container-item">
+                                    <span class="section-container-item-header">Introduction</span>
+                                    <span class="section-container-item-info">Small introduction of the different modules in this topic.</span>
+                                    <span class="section-container-item-count" style="display: none;">
+                                        <span>2</span><span>/</span><span>8</span>
+                                    </span>
+                                    <span class="section-container-lock-icon"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    
+    <script src="Content/js/script.js"></script>
+    <script src="Content/js/topic.js"></script>
+    <script src="Content/js/common.js"></script>
+</body>
+</html>
+
+

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>E-Learning Application</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+        <link href="https://fonts.googleapis.com/css?family=Heebo:400,700&display=swap&subset=hebrew" rel="stylesheet">
+        <link rel="stylesheet" href="Content/Site.css">
+        <link rel="stylesheet" href="Content/profile-setting.css">
+        <script src="Content/js/jquery-3.0.0.js"></script>
+    </head>
+<body>
+    <div class="page-wrapper">
+        <header class="navbar-container">
+            <div class="navbar-container-wrapper">
+                <div class="container" id="topbar">
+                    <div class="container-column navbar-wrapper">
+                        <div class="navbar-wrapper-info">
+                            <div class="navbar-logo"><a href="#"></a></div>
+                            <div class="navbar-notification" onclick="openAccountSettingPanel(this, event)">
+                                <span class="navbar-notification-icon"></span>
+                                <span class="navbar-notification-info">NOTIFICATIONS</span>
+                                <span class="navbar-notification-count">1</span>
+                                <div class="navbar-widget navbar-notification-wrapper" style="display: none;">
+                                    <div class="navbar-notification-widget clearfix">
+                                        <div>
+                                            <div class="navbar-notification-widget-text unread-notification">You just completed the <span>Principles Made Practical module</span>
+                                            </div>
+                                            <div class="navbar-notification-widget-text unread-notification">You’re <span>halfway</span> at completing all your modules! Congrats!
+                                            </div>
+                                            <div class="navbar-notification-widget-text">You just completed the <span>Staff Development topic</span>
+                                            </div>
+                                        </div>
+                                        <div class="navbar-notification-clear">Clear all</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="navbar-profile">
+                            <div onclick="openAccountSettingPanel(this, event)">
+                                <img class="navbar-profile-logo" src="Content/images/dan.jpg"/>
+                                <span class="navbar-profile-name">Daniel</span>
+                                <div class="navbar-widget" style="display: none;">
+                                    <ul class="navbar-widget-list">
+                                        <li><a href="profile.html">Profile</a></li>
+                                        <li><a href="settings.html">Settings</a></li>
+                                        <li><a href="javascript:void(0)">Logout</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>                                                                    
+        </header>
+        <div class="main-wrapper-panel">
+            <section class="container-highlight"></section>
+            <div class="main-wrapper-panel-header">
+                <section class="container">
+                    <div class="container-column">
+                        <div class="section-header-main">
+                            <div class="section-header-box">
+                                <a href="index.html" class="section-back-btn"><span></span><span class="section-back-btn-text">Back to Dashboard</span></a>
+                                <h2 class="section-header-text align-c">Settings</h2>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="main-wrapper-panel-body">
+                <section class="container">
+                    <div class="container-column">
+                        <div class="section-form-main-fold setting-section-form-wrapper">
+                            <div class="setting-section-tab-box clearfix">
+                                <div class="setting-section-tabs active-setting-tab" data-id="dvProfileContainer">Profile</div>
+                                <div class="setting-section-tabs" data-id="dvNotificationContainer">Notifications</div>
+                            </div>
+                            <div class="setting-section-tab-info" id="dvProfileContainer">
+                                <form id="changeProfileSettings" method="post">
+                                    <div class="section-form-element">
+                                        <img id="profilePicBox" class="section-form-banner-box" src="Content/images/dan.jpg" />
+                                        <label for="dvChangeProfilePic" class="black-transparent-btn">Change pic</label>
+                                        <input type='file' id="dvChangeProfilePic" onchange="changeProfilePic(this);" />
+                                    </div>
+                                    <div class="section-form-element">
+                                        <label for="profileName">First & Last name</label>
+                                        <input type="text" class="section-form-control" id="profileName" onblur="checkNameValidation(this)" onkeyup="removeSaveBtn(this, event)" name="profileName" placeholder="First & Last name">
+                                        <div class="section-form-error">Please enter a valid name</div>
+                                    </div>
+                                    <div class="section-form-element">
+                                        <label for="profileMail">Email</label>
+                                        <input type="email" class="section-form-control" onblur="checkEmailValidation(this)" onkeyup="removeSaveBtn(this, event)" id="profileMail" name="profileMail" placeholder="Email">
+                                        <div class="section-form-error">Please enter a valid email id</div>
+                                    </div>
+                                    <div class="section-form-element">
+                                        <label for="profileDesignation">Position</label>
+                                        <input type="text" class="section-form-control" onblur="checkNameValidation(this)" onkeyup="removeSaveBtn(this, event)" id="profileDesignation" name="profileDesignation" placeholder="Position">
+                                        <div class="section-form-error">Please enter a valid position</div>
+                                    </div>
+                                    <a href="change-password.html" class="section-form-anchor">Change password</a>
+                                    <div class="section-form-btn section-profile-btn">
+                                        <input type="submit" id="saveProfileSettingsBtn" class="primary-btn blue-btn" value="Save" onclick="return validateProfileFields()"/>
+                                        <a href="javascript:void(0)" id="saveProfileBtn" class="primary-btn green-btn" style="display: none;">Saved</a>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="setting-section-tab-info" id="dvNotificationContainer" style="display: none;">
+                                <form id="changeNotifySettings" method="post">
+                                    <div class="section-notify-element">
+                                        <div class="section-notify-child">
+                                            <input type="checkbox" onchange="checkNotificationStatus(this)" class="section-notify-checkbox" name="dvEmailNotifiactions" id="dvEmailNotifiactions"/>
+                                            <label for="dvEmailNotifiactions" class="section-notify-child-label">Email notifications</label>
+                                        </div>
+                                        <div class="section-notify-info">We’ll send you weekly emails on your current progress.</div>
+                                    </div>
+                                    <div class="section-notify-element">
+                                        <div class="section-notify-child">
+                                            <input type="checkbox" onchange="checkNotificationStatus(this)" class="section-notify-checkbox" name="dvPushNotifiactions" id="dvPushNotifiactions"/>
+                                            <label for="dvPushNotifiactions" class="section-notify-child-label">Push notifications</label>
+                                        </div>
+                                        <div class="section-notify-info">We’ll send you notifications about updates and your progress.</div>
+                                    </div>
+                                    <div class="section-form-btn section-profile-btn">
+                                        <input type="submit" id="saveNotificationSettingBtn" class="primary-btn blue-btn" value="Save" onclick="return validateNotificationFields()"/>
+                                        <a href="javascript:void(0)" id="saveNotificationBtn" class="primary-btn green-btn" style="display: none;">Saved</a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <script src="Content/js/signup.js"></script>
+    <script src="Content/js/settings.js"></script>
+    <script src="Content/js/common.js"></script>
+</body>
+</html>
+

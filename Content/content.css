@@ -1,0 +1,96 @@
+/*section content css starts here*/
+.section-content-header {padding: 0 0 50px;}
+.section-content-card-wrapper{padding: 0 0 60px;}
+.section-para-head{
+    font-weight: 700;
+    font-size: 24px;
+    padding: 0 0 10px;
+}
+.section-para-info{
+    color: #2B2B2B;
+    font-size: 19px;
+    line-height: 1.4;
+}
+.section-content-card{
+    margin: 0 0 20px;
+    padding: 30px 25px;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: space-between;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.section-content-card-wrapper .section-content-card:last-child{margin: 0 0 0px;}
+.section-content-card-desc>span{display:block;}
+span.section-content-card-desc {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    padding: 0 15px 0;
+}
+span.card-item-parent {
+    display: block;
+    min-width: 58px;
+    text-align: center;
+}
+.section-content-card-desc>span:nth-child(1){
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 29px;
+    margin: 0 0 2px;
+}
+.section-content-card-desc>span:nth-child(2){
+    color: #2B2B2B;
+    font-size: 15px;
+    line-height: 22px;
+}
+.section-content-card-item{
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    display: inline-block;
+    vertical-align: middle;
+    width: 36px;
+    height: 37px;
+}
+.section-card-name{
+    display: block;
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 14px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 2px;
+}
+.section-content-card-item.card-video{
+    background-image: url(images/video-icon.svg);
+    height: 29px;
+}
+.section-content-card-item.card-pdf{
+    background-image: url(images/pdf-icon.svg);
+    background-size: 28px;
+}
+.section-content-card-item.card-survey{
+    background-image: url(images/survey-icon.svg);
+}
+.section-content-card-item.card-flashcard{
+    background-image: url(images/flashcard-icon.svg);
+    height: 35px;
+    background-size: 48px;
+}
+.section-content-card-item.card-quiz{
+    background-image: url(images/quiz-icon.svg);
+    background-size: 26px;
+}
+.section-content-card-status {
+    background-position: center;
+    background-size: contain;
+    height: 19px;
+    width: 24px;
+}
+.section-content-card-status.lock-icon{
+    height: 22px;
+    background-size: 15px;
+}
+/*section content css ends here*/

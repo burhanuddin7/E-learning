@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>E-Learning Application</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+        <link href="https://fonts.googleapis.com/css?family=Heebo:400,700&display=swap&subset=hebrew" rel="stylesheet">
+        <link rel="stylesheet" href="Content/Site.css">
+        <link rel="stylesheet" href="Content/flashcard.css">
+        <script src="Content/js/jquery-3.0.0.js"></script>
+    </head>
+<body>
+    <div class="page-wrapper">
+        <header class="navbar-container">
+            <div class="navbar-container-wrapper">
+                <div class="container" id="topbar">
+                    <div class="container-column navbar-wrapper">
+                        <div class="navbar-wrapper-info">
+                            <div class="navbar-logo"><a href="#"></a></div>
+                            <div class="navbar-notification">
+                                <span class="navbar-notification-icon"></span>
+                                <span class="navbar-notification-info">NOTIFICATIONS</span>
+                                <span class="navbar-notification-count">1</span>
+                            </div>
+                        </div>
+                        <div class="navbar-profile">
+                            <div>
+                                <img class="navbar-profile-logo" src="Content/images/dan.jpg"/>
+                                <span class="navbar-profile-name">Daniel</span>
+                            </div>
+                        </div> 
+                    </div>
+                </div> 
+            </div>                                                               
+        </header>
+        <div class="main-wrapper-panel">
+            <section class="container-highlight"></section>  
+            <div class="main-wrapper-panel-header">
+                <section class="container">
+                    <div class="container-column">
+                        <div class="section-header-main">
+                            <div class="section-header-box">
+                                <a href="#" class="section-back-btn"><span></span><span class="section-back-btn-text">Back to Topics</span></a>
+                                <h2 class="section-header-text align-c">Employee Goal setting</h2>
+                            </div>
+                            <div class="section-header-smalltext align-c">Flashcards</div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="main-wrapper-panel-body">
+                <section class="container">
+                    <div class="container-column">
+                        <div class="section-flashcard-container section-container-main" style="display: none;">
+
+                            <!--Flashcard Into text structure-->
+                            <div class="section-flashcard-intro" style="display: none;">
+                                <div class="section-flashcard-intro-header">In this flashcard series we’ll answer:</div>
+                                <div class="section-flashcard-intro-list">
+                                    <ul>
+                                        <li>What makes a good communicator?</li>
+                                        <li>How to motivate yourself when being in the office?</li>
+                                        <li>How to be more productive?</li>
+                                    </ul>
+                                </div>
+                                <div class="section-flashcard-intro-btn clearfix">
+                                    <a href="#" class="secondary-anchor-link float-l">Skip flashcards</a>
+                                    <a href="#" class="primary-btn blue-btn float-r">Let's go!</a>
+                                </div>
+                            </div>
+
+                            <div class="section-flashcard-block" style="display: none;">
+                                <div class="section-flashcard-blockinfo">What is the main difference between the goals of management and the employees?</div>
+
+                                <!--Flashcard Squrae box quiz structure-->
+                                <div class="section-flashcard-block-parent">
+                                    <div class="section-flashcard-block-child flashcard-answer-correct">
+                                        <div class="section-flashcard-child-desc">Employees do everything for themself, management don’t</div>
+                                        <div class="section-flashcard-block-icon"></div>
+                                    </div>
+                                    <div class="section-flashcard-block-child flashcard-answer-wrong">
+                                        <div class="section-flashcard-child-desc">The management helps to the employees</div>
+                                        <div class="section-flashcard-block-icon"></div>
+                                    </div>
+                                    <div class="section-flashcard-block-child">
+                                        <div class="section-flashcard-child-desc">Employees do everything for themself, management don’t</div>
+                                        <div class="section-flashcard-block-icon"></div>
+                                    </div>
+                                </div>
+
+                                <!--Flashcard Rectangle box quiz structure-->
+                                <div class="section-flashcard-block-parent section-flashcard-rectangle" style="display: none;">
+                                    <div class="section-flashcard-block-child flashcard-answer-correct">
+                                        <div class="section-flashcard-child-desc">Employees do everything for themself, management don’t</div>
+                                        <div class="section-flashcard-block-icon"></div>
+                                    </div>
+                                    <div class="section-flashcard-block-child flashcard-answer-wrong">
+                                        <div class="section-flashcard-child-desc">The management helps to the employees</div>
+                                        <div class="section-flashcard-block-icon"></div>
+                                    </div>
+                                    <div class="section-flashcard-block-child flashcard-answer-wrong">
+                                        <div class="section-flashcard-child-desc">Employees do everything for themself, management don’t</div>
+                                        <div class="section-flashcard-block-icon"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--Flashcard slider structure-->
+                            <div class="section-quiz-flashcard-wrapper" style="display: none;">
+                                <div class="section-quiz-flashcard">
+                                    <div class="section-quiz-flashcard-list flashcard-list1" data-id="1" style="display: block;">
+                                        <div class="section-quiz-flashcard-logo flashcard-logo1"></div>
+                                        <div class="section-quiz-flashcard-info">There’s a big difference between imposing goals on employees and encouraging them to suggest goals of their own.</div>
+                                        <div class="section-quiz-flashcard-count"><span class="flashcard-current-count"></span><span>/</span><span class="flashcard-total-count"></span></div>
+                                    </div>
+
+                                    <div class="section-quiz-flashcard-list flashcard-list2" data-id="2">
+                                        <div class="section-quiz-flashcard-logo flashcard-logo2"></div>
+                                        <div class="section-quiz-flashcard-info">When their suggested goals align with company objectives, a manager can help develop action plans to attain those goals.</div>
+                                        <div class="section-quiz-flashcard-count"><span class="flashcard-current-count"></span><span>/</span><span class="flashcard-total-count"></span></div>
+                                    </div>
+
+                                    <div class="section-quiz-flashcard-list flashcard-list3" data-id="3">
+                                        <div class="section-quiz-flashcard-logo flashcard-logo3"></div>
+                                        <div class="section-quiz-flashcard-info">Goal-setting sometimes fails when the objective is too ambitious or simply unattainable, given the employee’s skill set and available resources.</div>
+                                        <div class="section-quiz-flashcard-count"><span class="flashcard-current-count"></span><span>/</span><span class="flashcard-total-count"></span></div>
+                                    </div>
+
+                                    <div class="section-quiz-flashcard-list flashcard-list4" data-id="4">
+                                        <div class="section-quiz-flashcard-logo flashcard-logo4"></div>
+                                        <div class="section-quiz-flashcard-info">Burdening an employee with an unattainable goal can lead to frustration with the process and a resulting lack of motivation for further improvement.</div>
+                                        <div class="section-quiz-flashcard-count"><span class="flashcard-current-count"></span><span>/</span><span class="flashcard-total-count"></span></div>
+                                    </div>
+
+                                </div>
+
+                                <div class="section-quiz-flashcard-btn align-c">
+                                    <a href="javascript:GoPrev()" id="btnPrevFlashCard" class="primary-btn transparent-btn" style="display: none;">Previous card</a>
+                                    <a href="javascript:GoNext()" id="btnNextFlashCard" class="primary-btn yellow-btn">Next card</a>
+                                    <a href="javascript:void(0)" id="btnQuizFlashCard" class="primary-btn blue-btn" style="display: none;">Begin flashcard quiz</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Congrats message for completion of videos structure-->
+                        <div class="section-completion-container align-c">
+                            <div class="section-completion-header">Congrats! You completed all the videos in this module.</div>
+                            <div class="section-completion-next">Up next:</div>
+                            <div class="section-completion-icon common-shadow-box">
+                                <span class="flashcard-complete-icon"></span><span class="section-completion-icon-text">Flashcard</span>
+                            </div>
+                            <div class="section-completion-info">Daily habits, that can increase mindfulness</div>
+                            <div>
+                                <a href="javascript:void(0)" class="primary-btn transparent-btn">Skip</a>
+                                <a href="javascript:void(0)" class="primary-btn">Do the quiz</a>
+                            </div>
+                        </div>
+
+                        <!--Congrats message for completion of quiz green structure-->
+                        <div class="section-completion-container align-c" style="display: none;">
+                            <div class="section-completion-header">Congrats! You completed all the videos in this module.</div>
+                            <div class="section-completion-next">Up next:</div>
+                            <div class="section-completion-icon common-shadow-box">
+                                <span class="quiz-green-complete-icon"></span><span class="section-completion-icon-text">Quiz</span>
+                            </div>
+                            <div class="section-completion-info">Daily habits, that can increase mindfulness</div>
+                            <div>
+                                <a href="javascript:void(0)" class="primary-btn">Do the quiz</a>
+                            </div>
+                        </div>
+
+                        <!--Congrats message for completion of quiz red structure-->
+                        <div class="section-completion-container align-c" style="display: none;">
+                            <div class="section-completion-header">Congrats! You completed all the videos in this module.</div>
+                            <div class="section-completion-next">Up next:</div>
+                            <div class="section-completion-icon common-shadow-box">
+                                <span class="quiz-red-complete-icon"></span><span class="section-completion-icon-text">Quiz</span>
+                            </div>
+                            <div class="section-completion-info">Daily habits, that can increase mindfulness</div>
+                            <div>
+                                <a href="javascript:void(0)" class="primary-btn transparent-btn">Skip</a>
+                                <a href="javascript:void(0)" class="primary-btn">Do the quiz</a>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    
+    <script src="Content/js/flashcard.js"></script>
+</body>
+</html>

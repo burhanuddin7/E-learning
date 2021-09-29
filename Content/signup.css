@@ -1,0 +1,94 @@
+div.main-wrapper-panel {
+    top: 0px;
+}
+.section-account-container {
+    padding: 40px 0 0;
+}
+.section-account-wrapper{
+    position: relative;
+    max-width: 550px;
+    margin: 0 auto;
+    padding: 0 0 60px;
+}
+.section-account-main-box{
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 43px 0 rgba(0,0,0,0.24);
+    width: 100%;
+    padding: 40px 40px 60px;
+    text-align: center;
+}
+.section-account-back-btn {
+    position: absolute;
+    left: -140px;
+    top: 20px;
+    color: #444444;
+    line-height: 1.2;
+    cursor: pointer;
+}
+.section-account-back-btn span{
+    margin: 0 0px 0px 5px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.section-account-main-header {
+    font-size: 40px;
+    font-weight: 700;
+}
+.section-account-subinfo {
+    font-size: 24px;
+    font-weight: 700;
+    padding: 10px 0 0;
+}
+.section-account-form-info {
+    margin: auto;
+    padding: 40px 0 0;
+    max-width: 300px;
+}
+.section-form-element{
+    margin: 0 0 30px;
+    text-align: left;
+    position: relative;
+}
+.section-form-element>label{
+    font-size: 14px;
+    text-transform: uppercase;
+    display: block;
+    margin: 0 0 8px;
+}
+.section-form-control{
+    outline: none;
+    color: #7F7F7F;
+    font-size: 18px;
+    line-height: 1.5;
+    border: none;
+    width: 100%;
+    padding: 0px 10px 0px 0px;
+    border-bottom: 2px solid rgba(127, 127, 127, .7);
+}
+.section-form-btn .primary-btn{width: 60%;border: none;outline: none;cursor: pointer;letter-spacing: 0;}
+.section-form-btn{padding: 20px 0 0;}
+.section-form-error{
+    display: none;
+}
+.section-form-element.invalid .section-form-error{
+    display: block;
+    color: #F74E35;
+    position: absolute;
+    bottom: -20px;
+    width: 100%;
+    font-size: 13px;
+}
+.section-account-mailinfo {
+    padding: 20px 0 0;
+    max-width: 75%;
+    margin: auto;
+}
+.section-forgot-link{
+    font-size: 16px;
+    font-weight: 700;
+    color: #000;
+    display: inline-block;
+    text-decoration: underline;
+    padding: 5px 0;
+}
+.section-form-valid>label{color: #7F7F7F;}

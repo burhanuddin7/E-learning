@@ -1,0 +1,289 @@
+.modalOverlayContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    display: none;
+    background-color: rgba(0,0,0,0.6);
+}
+.modalOverlayContainer.whiteOverlay{
+    background-color: rgba(255,255,255,0.95);
+}
+.modal-container-main{position: relative;}
+.modal-container-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    box-shadow: 0 5px 28px 0 rgba(0,0,0,0.5);
+    background-color: #fff;
+    display: none;
+}
+.whiteOverlay .modal-container-wrapper{
+    box-shadow: 0 2px 13px 0 rgba(0,0,0,0.07);
+}
+.modal-close-btn {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    width: 25px;
+    height: 25px;
+}
+.modal-close-btn::before, .modal-close-btn::after {
+    position: absolute;
+    left: 11px;
+    top: -1px;
+    content: ' ';
+    height: 28px;
+    width: 2px;
+    background-color: rgba(0, 0, 0, .5);
+}
+.modal-close-btn::before {
+    transform: rotate(45deg);
+}
+.modal-close-btn::after {
+    transform: rotate(-45deg);
+}
+.modal-container-main-info {padding: 40px;}
+.modal-container-header-infotip {
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 290px;
+    margin: 0 0 0 20px;
+}
+.modal-container-tip-header {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0 0 5px;
+}
+.modal-container-header-part {
+    padding: 0 0 40px;
+}
+.modal-container-reward-tag {
+    color: rgba(0, 0, 0, .5);
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0 0 15px;
+    text-align: left;
+}
+.modal-container-body-part {
+    padding: 0 0 30px;
+}
+.modal-container-list-info{
+    margin: 0 0 0 65px;
+}
+.modal-container-list-info li{position: relative;margin: 0 0 10px;}
+.modal-container-list-info li:last-child{margin: 0 0 0;}
+.modal-container-list-info li::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -20px;
+    transform: translate(0, -50%);
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: #FEC900;
+}
+.modal-container-footer-part{
+    text-align: center;
+}
+.modal-container-btn {
+    padding: 40px 0 0;
+}
+.modal-container-btn>.primary-btn.blue-btn {
+    width: 160px;
+}
+.modal-container-suprise-wrapper .modal-container-header-part{text-align: center;}
+.modal-container-suprise-wrapper .modal-container-tip-header{
+    font-size: 18px;
+    font-weight: normal;
+    margin: 0 0 10px;
+}
+.modal-container-suprise-wrapper .modal-container-tip-desc{
+    font-size: 30px;
+    font-weight: 700;
+    padding: 0 0 15px;
+}
+.modal-container-suprise-wrapper .modal-container-body-part{
+    max-width: 320px;
+    margin: auto;
+    padding: 0 0 10px;
+}
+.modal-container-suprise-wrapper .modal-container-reward-tag{color: #000;text-transform: inherit;}
+.modal-container-suprise-wrapper .modal-container-list-info {margin: 0 0 0 30px;}
+.modal-container-suprise-wrapper .modal-container-btn>.primary-btn.blue-btn {
+    width: 190px;
+}
+.modal-container-suprise-wrapper  .modal-container-list-info li {
+    font-size: 18px;
+    line-height: 1.45;
+}
+.modal-container-only-desc{
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+}
+.personal-gift-logo,.module-completion-section img, .module-congrats-section img{margin-bottom: 35px;}
+.modal-container-suprise-wrapper .modal-container-body-part.personal-gift-box{
+    text-align: center;
+    max-width: 100%;
+}
+.personal-gift-box .common-shadow-box{
+    height: 100px;
+    width: 80px;
+    margin: 10px auto 25px;
+    box-shadow: 0 3px 13px 3px rgba(0,0,0,0.08);
+}
+.personal-gift-highlight{font-size: 23px;line-height: 1.45;}
+.personal-gift-highlight>span{font-weight:700;}
+.personal-gift-note{
+    color: #7F7F7F;
+    margin-top: 15px;
+}
+.personal-gift-note>span{font-weight: 700;}
+.personal-gift-header-part{text-align: center;}
+.modal-container-btn.personal-gift-btn{padding: 20px 0 0;}
+.personal-gift-ebook{margin: 10px 0 25px;}
+.module-completion-section .modal-container-tip-desc{padding: 0 0 0;}
+.modal-highlight-tag{font-weight: 700;}
+.personal-gift-box .personal-section-name {
+    color: #000;
+    font-size: 10px;
+    display: block;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 5px 0 0;
+}
+.personal-gift-box .personal-flashcard-icon {
+    background: url(images/completion-flashcard-icon.svg) no-repeat center;
+    display: inline-block;
+    background-size: 60px;
+    width: 50px;
+    height: 50px;
+    background-position: -6px 6px;
+    margin: 12px 0 0;
+}
+.module-congrats-section .modal-container-tip-header{
+    max-width: 320px;
+    margin: 0 auto 0px;
+    line-height: 1.45;
+}
+.modal-container-header-part.module-congrats-section {
+    padding: 0 0 0px;
+}
+.motivational-gift-tag{
+    font-size: 18px;
+    font-weight: 700;
+}
+.motivational-gift-badge {
+    margin: 25px 0 15px;
+}
+
+/*Video popup section css starst here*/
+.modal-container-suprise-wrapper .modal-container-body-part.personal-video-box {
+    max-width: 380px;
+    height: 220px;
+    margin: auto;
+    padding: 0px 0 0px;
+    box-sizing: content-box;
+    background: #000;
+    position: relative;
+}
+.section-video-main {
+    outline: none;
+}
+.modal-video-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 8;
+    background-color: rgba(0,0,0,0.7);
+    cursor: pointer;
+}
+.modal-video-overlay::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 40px solid #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.modal-container-main-info.profile-video-wrapper {
+    padding: 60px 80px 40px;
+}
+.modal-container-suprise-wrapper.profile-video-wrapper .modal-container-body-part.personal-video-box {
+    max-width: 100%;
+    height: 400px;
+}
+.profile-video-footer-section{padding: 25px 0 0;}
+.profile-container-tip-header{
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0 0 8px;
+}
+.profile-container-tip-desc{
+    font-size: 19px;
+    color: rgba(0,0,0,0.8);
+}
+.modal-transparent-wrapper{
+    background: transparent;
+    box-shadow: none;
+    color: #fff;
+}
+.modal-transparent-container{
+    background-color: rgba(0,0,0,0.90);
+}
+.modal-container-main-info.unlocked-modal-container {
+    padding: 20px;
+}
+.unlocked-modal-tip-header{
+    font-size: 70px;
+    font-weight: 700;
+    margin: 0 15px 0px 0px;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+}
+.unlock-gift-logo{
+    margin-bottom: 0;
+    vertical-align: top;
+    width: 77px;
+}
+.unlocked-container-tip-desc {
+    font-size: 27px;
+    font-weight: 700;
+    padding: 10px 0 15px;
+}
+.modal-container-suprise-wrapper.unlocked-modal-container .modal-container-body-part.personal-video-box {
+    max-width: 100%;
+    height: 250px;
+}
+.unlocked-quote-mess{
+    font-size: 16px;
+    padding: 10px 0 40px;
+    text-transform: uppercase;
+}
+.watch-later-btn{
+    font-size: 16px;
+    text-decoration: underline;
+    padding: 15px 0 0;
+    cursor: pointer;
+    display: inline-block;
+}
+.primary-btn.blue-btn.btn-disabled {
+    background: rgba(45, 125, 210, .65);
+    pointer-events: none;
+    user-select: none;
+  }

@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>E-Learning Application</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+        <link rel="stylesheet" href="Content/Site.css">
+        <link rel="stylesheet" href="Content/profile-setting.css">
+        <link rel="stylesheet" href="Content/modal-popup.css">
+        <script src="Content/js/jquery-3.0.0.js"></script>
+    </head>
+<body>
+    <div class="page-wrapper">
+        <header class="navbar-container">
+            <div class="navbar-container-wrapper">
+                <div class="container" id="topbar">
+                    <div class="container-column navbar-wrapper">
+                        <div class="navbar-wrapper-info">
+                            <div class="navbar-logo"><a href="#"></a></div>
+                            <div class="navbar-notification" onclick="openAccountSettingPanel(this, event)">
+                                <span class="navbar-notification-icon"></span>
+                                <span class="navbar-notification-info">NOTIFICATIONS</span>
+                                <span class="navbar-notification-count">1</span>
+                                <div class="navbar-widget navbar-notification-wrapper" style="display: none;">
+                                    <div class="navbar-notification-widget clearfix">
+                                        <div>
+                                            <div class="navbar-notification-widget-text unread-notification">You just completed the <span>Principles Made Practical module</span>
+                                            </div>
+                                            <div class="navbar-notification-widget-text unread-notification">You’re <span>halfway</span> at completing all your modules! Congrats!
+                                            </div>
+                                            <div class="navbar-notification-widget-text">You just completed the <span>Staff Development topic</span>
+                                            </div>
+                                        </div>
+                                        <div class="navbar-notification-clear">Clear all</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="navbar-profile">
+                            <div onclick="openAccountSettingPanel(this, event)">
+                                <img class="navbar-profile-logo" src="Content/images/dan.jpg"/>
+                                <span class="navbar-profile-name">Daniel</span>
+                                <div class="navbar-widget" style="display: none;">
+                                    <ul class="navbar-widget-list">
+                                        <li><a href="profile.html">Profile</a></li>
+                                        <li><a href="settings.html">Settings</a></li>
+                                        <li><a href="javascript:void(0)">Logout</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>                                                                    
+        </header>
+        <div class="main-wrapper-panel">
+            <div class="main-wrapper-panel-header">
+                <section class="container">
+                    <div class="container-column">
+                        <div class="section-header-main">
+                            <div class="section-header-box">
+                                <a href="#" class="section-back-btn"><span></span><span class="section-back-btn-text">Employee Motivation</span></a>
+                                <h2 class="section-header-text align-c">Your profile</h2>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="main-wrapper-panel-body">
+                <section class="container">
+                    <div class="container-column">
+                        <div class="section-container-main profile-section-container">
+                            <div class="profile-section-info">
+                                <div class="profile-section-pic"><img src="Content/images/dan.jpg"/></div>
+                                <div class="profile-section-name">
+                                    <span>Daniel Curtis</span>
+                                    <a class="black-transparent-btn" href="settings.html">Edit profile</a>
+                                </div>
+                            </div>
+                            <div class="profile-section-listbox">
+                                <div class="profile-section-title">Achievements</div>
+                                <div class="profile-section-list-parent">
+                                    <div class="profile-section-list-child" onclick="openModalPopUp('dvMotivationalCard', 580, 520)">
+                                        <img src="Content/images/quiz-master-c-icon.svg"/>
+                                        <div class="profile-section-item">Quiz Master</div>
+                                    </div>
+                                    <div class="profile-section-list-child" onclick="openModalPopUp('dvPerfectionistFeature', 560, 520)">
+                                        <img src="Content/images/perfectionist-c-icon.svg"/>
+                                        <div class="profile-section-item">Perfectionist</div>
+                                    </div>
+                                    <div class="profile-section-list-child" onclick="openModalPopUp('dvGuruSupriseFeature', 470, 520)">
+                                        <img src="Content/images/wordsmith-c-icon.svg"/>
+                                        <div class="profile-section-item">Wordsmith</div>
+                                    </div>
+                                    <div class="profile-section-list-child" onclick="openModalPopUp('dvEngagerProfileFeature', 590, 520)">
+                                        <img src="Content/images/engager-icon.svg"/>
+                                        <div class="profile-section-item">Engager</div>
+                                    </div>
+                                    <div class="profile-section-list-child" onclick="openModalPopUp('dvGuruProfileFeature', 600, 520)">
+                                        <img src="Content/images/engager-icon.svg"/>
+                                        <div class="profile-section-item">Guru</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="profile-section-listbox">
+                                <div class="profile-section-title">Your personal gifts</div>
+                                <div class="personal-section-list-parent">
+                                    <div class="personal-section-list-child" onclick="openModalPopUp('dvPersonalEBookGift', 620, 520)">
+                                        <div class="common-shadow-box">
+                                            <span class="personal-pdf-section">PDF</span>
+                                        </div>
+                                        <span class="personal-section-item">Improve your skills at the company</span>
+                                    </div>
+                                    <div class="personal-section-list-child" onclick="openModalPopUp('dvPersonalProfileVideo', 620, 960)">
+                                        <div class="common-shadow-box">
+                                            <span class="personal-video-icon"></span>
+                                            <span class="personal-section-name">Video</span>
+                                        </div>
+                                        <span class="personal-section-item">Personal greeting from Jared Green</span>
+                                    </div>
+                                    <div class="personal-section-list-child" onclick="openModalPopUp('dvPersonalFlashcardGift', 620, 520)">
+                                        <div class="common-shadow-box">
+                                            <span class="personal-flashcard-icon"></span>
+                                            <span class="personal-section-name">Flashcard</span>
+                                        </div>
+                                        <span class="personal-section-item">Tips for Effective Goal-Setting</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+
+        <div class="modalOverlayContainer">
+            <div class="modal-container-wrapper" id="dvEngagerProfileFeature">
+                <div class="modal-container-main">
+                    <a href="javascript:void(0)" onclick="closeModalPopUp(this)" class="modal-close-btn"></a>
+                    <div class="modal-container-main-info">
+                        <div class="modal-container-header-part">
+                            <img src="Content/images/engager-icon.svg"/>
+                            <div class="modal-container-header-infotip">
+                                <p class="modal-container-tip-header">The Engager</p>
+                                <p class="modal-container-tip-desc">The Engager is dedicated to the platform. She loves interacting with others and sharing her thoughts about the topics.</p>
+                            </div>
+                        </div>
+                        <div class="modal-container-body-part">
+                            <div class="modal-container-reward-tag">Requirements</div>
+                            <ul class="modal-container-list-info">
+                                <li>Be an active part of the community</li>
+                                <li>Express your opinion</li>
+                                <li>React to the videos</li>
+                            </ul>
+                        </div>
+                        <div class="modal-container-footer-part">
+                            <div class="modal-container-reward-tag">Your Reward on completion</div>
+                            <img src="Content/images/reward-icon.svg"/>
+                        </div>
+                        <div class="align-c modal-container-btn">
+                            <a href="javascript:void(0)" class="primary-btn blue-btn">Got it!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modalOverlayContainer">
+            <div class="modal-container-wrapper" id="dvGuruProfileFeature">
+                <div class="modal-container-main">
+                    <a href="javascript:void(0)" onclick="closeModalPopUp(this)" class="modal-close-btn"></a>
+                    <div class="modal-container-main-info">
+                        <div class="modal-container-header-part">
+                            <img src="Content/images/engager-icon.svg"/>
+                            <div class="modal-container-header-infotip">
+                                <p class="modal-container-tip-header">The Guru</p>
+                                <p class="modal-container-tip-desc">The Guru is the absolute user of the platform. He/she is an active part of the community and completing all content within the different topics.</p>
+                            </div>
+                        </div>
+                        <div class="modal-container-body-part">
+                            <div class="modal-container-reward-tag">Requirements</div>
+                            <ul class="modal-container-list-info">
+                                <li>Be an active part of the community</li>
+                                <li>Complete all the topics</li>
+                                <li>Watch and read optional content as well</li>
+                            </ul>
+                        </div>
+                        <div class="modal-container-footer-part">
+                            <div class="modal-container-reward-tag">Your gift</div>
+                            <img src="Content/images/reward-icon.svg"/>
+                        </div>
+                        <div class="align-c modal-container-btn">
+                            <a href="javascript:void(0)" class="primary-btn blue-btn">Got it!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modalOverlayContainer whiteOverlay">
+            <div class="modal-container-wrapper" id="dvPerfectionistFeature">
+                <div class="modal-container-main">
+                    <div class="modal-container-main-info modal-container-suprise-wrapper">
+                        <div class="modal-container-header-part">
+                            <div class="modal-container-tip-header">Hurray! You just became a</div>
+                            <div class="modal-container-tip-desc">Perfectionist</div>
+                            <img src="Content/images/perfectionist-c-icon.svg"/>
+                        </div>
+                        <div class="modal-container-body-part">
+                            <div class="modal-container-reward-tag">You get the following gifts:</div>
+                            <ul class="modal-container-list-info">
+                                <li>Setting goals</li>
+                                <li>Know how to motivate yourself while being an employee</li>
+                                <li>Keep a good attitude at the office</li>
+                            </ul>
+                        </div>
+                        <div class="align-c modal-container-btn">
+                            <a href="javascript:void(0)" onclick="closeModalPopUp(this)" class="primary-btn blue-btn">Great!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modalOverlayContainer whiteOverlay">
+            <div class="modal-container-wrapper" id="dvGuruSupriseFeature">
+                <div class="modal-container-main">
+                    <div class="modal-container-main-info modal-container-suprise-wrapper">
+                        <div class="modal-container-header-part">
+                            <div class="modal-container-tip-header">Hurray! You just became a</div>
+                            <div class="modal-container-tip-desc">Guru</div>
+                            <img src="Content/images/engager-icon.svg"/>
+                        </div>
+                        <div class="modal-container-body-part">
+                            <div class="modal-container-only-desc">Please visit the upper management to receive your gift!</div>
+                        </div>
+                        <div class="align-c modal-container-btn">
+                            <a href="javascript:void(0)" onclick="closeModalPopUp(this)" class="primary-btn blue-btn">Great!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modalOverlayContainer whiteOverlay">
+            <div class="modal-container-wrapper" id="dvPersonalFlashcardGift">
+                <div class="modal-container-main">
+                    <div class="modal-container-main-info modal-container-suprise-wrapper">
+                        <div class="personal-gift-header-part">
+                            <img src="Content/images/suprrise-icon.svg" class="personal-gift-logo"/>
+                            <div class="modal-container-tip-header">Surprise!</div>
+                            <div class="modal-container-tip-desc">You just unlocked a personal gift!</div> 
+                        </div>
+                        <div class="modal-container-body-part personal-gift-box">
+                            <div class="common-shadow-box">
+                                <span class="personal-flashcard-icon"></span>
+                                <span class="personal-section-name">Flashcard</span>
+                            </div>
+                            <div class="personal-gift-highlight"><span>Flashcard</span>: How to Motivate Yourself in your Daily Life by Jared Green</div>
+                        </div>
+                        <div class="align-c modal-container-btn personal-gift-btn">
+                            <a href="javascript:void(0)" onclick="closeModalPopUp(this)" class="primary-btn blue-btn">Continue</a>
+                            <div class="personal-gift-note"><span>Note</span>: You can access this gift in your Profile page</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modalOverlayContainer whiteOverlay">
+            <div class="modal-container-wrapper" id="dvPersonalEBookGift">
+                <div class="modal-container-main">
+                    <div class="modal-container-main-info modal-container-suprise-wrapper">
+                        <div class="personal-gift-header-part">
+                            <img src="Content/images/suprrise-icon.svg" class="personal-gift-logo"/>
+                            <div class="modal-container-tip-header">Surprise!</div>
+                            <div class="modal-container-tip-desc">You just unlocked a personal gift!</div> 
+                        </div>
+                        <div class="modal-container-body-part personal-gift-box">
+                            <img src="Content/images/ebook-icon.svg" class="personal-gift-ebook"/>
+                            <div class="personal-gift-highlight"><span>eBook</span>: How to Motivate Yourself in your Daily Life by Jared Green</div>
+                        </div>
+                        <div class="align-c modal-container-btn personal-gift-btn">
+                            <a href="javascript:void(0)" onclick="closeModalPopUp(this)" class="primary-btn blue-btn">Continue</a>
+                            <div class="personal-gift-note"><span>Note</span>: You can access this gift in your Profile page</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- MOdule completion code [openModalPopUp('dvModuleCompletionCard', 590, 520)]-->
+        <div class="modalOverlayContainer whiteOverlay">
+            <div class="modal-container-wrapper" id="dvModuleCompletionCard">
+                <div class="modal-container-main">
+                    <div class="modal-container-main-info modal-container-suprise-wrapper">
+                        <div class="modal-container-header-part module-completion-section">
+                            <img src="Content/images/module-compl-icon.svg"/>
+                            <div class="modal-container-tip-header">Hurray! You’ve just completed module:</div>
+                            <div class="modal-container-tip-desc">Employee Motivation</div>
+                        </div>
+                        <div class="modal-container-body-part">
+                            <div class="modal-container-reward-tag">You gained the following skills:</div>
+                            <ul class="modal-container-list-info">
+                                <li>Setting goals</li>
+                                <li>Know how to motivate yourself while being an employee</li>
+                                <li>Keep a good attitude at the office</li>
+                            </ul>
+                        </div>
+                        <div class="align-c modal-container-btn">
+                            <a href="javascript:void(0)" onclick="closeModalPopUp(this)" class="primary-btn blue-btn">Great!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- MOdule Congrts Message code [openModalPopUp('dvProgressReportCard', 400, 520)]-->
+        <div class="modalOverlayContainer whiteOverlay">
+            <div class="modal-container-wrapper" id="dvProgressReportCard">
+                <div class="modal-container-main">
+                    <div class="modal-container-main-info modal-container-suprise-wrapper">
+                        <div class="modal-container-header-part module-congrats-section">
+                            <img src="Content/images/module-compl-icon.svg"/>
+                            <div class="modal-container-tip-desc">Congrats!</div>
+                            <div class="modal-container-tip-header">Only the <span class="modal-highlight-tag">5% of users</span> reached this point with that few mistakes.</div>
+                        </div>
+                        <div class="align-c modal-container-btn">
+                            <a href="javascript:void(0)" onclick="closeModalPopUp(this)" class="primary-btn blue-btn">Great!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- MOdule Motivational Keep up good work wordSmith Message code [openModalPopUp('dvMotivationalCard', 580, 520)]-->
+        <div class="modalOverlayContainer whiteOverlay">
+            <div class="modal-container-wrapper" id="dvMotivationalCard">
+                <div class="modal-container-main">
+                    <div class="modal-container-main-info modal-container-suprise-wrapper">
+                        <div class="modal-container-header-part module-congrats-section">
+                            <img src="Content/images/gold-trophy-icon.svg"/>
+                            <div class="modal-container-tip-desc">Keep up the good work!</div>
+                            <div class="modal-container-tip-header">Comment in 2 more modules and become a</div>
+                        </div>
+                        <div class="modal-container-body-part personal-gift-box">
+                            <img src="Content/images/wordsmith-general-icon.svg" class="motivational-gift-badge"/>
+                            <div class="motivational-gift-tag">Wordsmith</div>
+                        </div>
+                        <div class="align-c modal-container-btn">
+                            <a href="javascript:void(0)" onclick="closeModalPopUp(this)" class="primary-btn blue-btn">Great!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Personal video jared green code openModalPopUp('dvPersonalVideoGift', 620, 600)"-->
+        <div class="modalOverlayContainer whiteOverlay">
+            <div class="modal-container-wrapper" id="dvPersonalVideoGift">
+                <div class="modal-container-main">
+                    <div class="modal-container-main-info modal-container-suprise-wrapper">
+                        <div class="personal-gift-header-part">
+                            <img src="Content/images/suprrise-icon.svg" class="personal-gift-logo"/>
+                            <div class="modal-container-tip-header">Surprise!</div>
+                            <div class="modal-container-tip-desc">You just unlocked a personal video greeting from Jared Green!</div> 
+                        </div>
+                        <div class="modal-container-body-part personal-video-box">
+                            <div class="modal-video-overlay" onclick="playModalVideoPlayer(this)"></div>
+                            <iframe id="modalIframeVideo"
+                                width="100%" height="100%" src="https://www.youtube.com/embed/WLZjwyWPAA0"
+                                frameborder="0" allowfullscreen >
+                            </iframe>
+                            <video style="display: none;" id="modalVideoPlayer" class="section-video-main" autobuffer controls height="100%" width="100%">
+                                <source src="Content/video/msd.mp4" type="video/mp4" >
+                            </video>
+                        </div>
+                        <div class="align-c modal-container-btn personal-gift-btn">
+                            <a href="javascript:void(0)" onclick="closeModalVideoPlayer(this)" class="primary-btn blue-btn">Continue</a>
+                            <div class="personal-gift-note"><span>Note</span>: You can access this gift in your Profile page</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Personal video Profle with cross code openModalPopUp('dvPersonalProfileVideo', 620, 960)"-->
+        <div class="modalOverlayContainer whiteOverlay">
+            <div class="modal-container-wrapper" id="dvPersonalProfileVideo">
+                <div class="modal-container-main">
+                    <div class="modal-container-main-info modal-container-suprise-wrapper profile-video-wrapper">
+                        <a href="javascript:void(0)" onclick="closeModalVideoPlayer(this)" class="modal-close-btn"></a>
+                        <div class="modal-container-body-part personal-video-box">
+                            <div class="modal-video-overlay" onclick="playModalVideoPlayer(this)"></div>
+                            <iframe style="display: none;" id="profileIframeVideo"
+                                width="100%" height="100%" src="https://www.youtube.com/embed/WLZjwyWPAA0"
+                                frameborder="0" allowfullscreen >
+                            </iframe>
+                            <video id="profileVideoPlayer" class="section-video-main" autobuffer controls height="100%" width="100%">
+                                <source src="Content/video/msd.mp4" type="video/mp4" >
+                            </video>
+                        </div>
+                        <div class="profile-video-footer-section">
+                            <div class="profile-container-tip-header">Goal setting - How to get over obstacles?</div>
+                            <div class="profile-container-tip-desc">In this video, we’ll go through the basics of goal setting. Goals are an important aspect of motivation and can help you a lot in the long-term.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Personal unlocked Transparent video code openModalPopUp('dvPersonalUnlockedVideo', 620, 550)"-->
+        <div class="modalOverlayContainer modal-transparent-container">
+            <div class="modal-container-wrapper modal-transparent-wrapper" id="dvPersonalUnlockedVideo">
+                <div class="modal-container-main">
+                    <div class="modal-container-main-info modal-container-suprise-wrapper unlocked-modal-container">
+                        <div class="personal-gift-header-part">
+                            <div class="unlocked-modal-tip-header">Surprise!</div>
+                            <img src="Content/images/module-compl-icon.svg" class="unlock-gift-logo"/>
+                            <div class="unlocked-container-tip-desc">You just unlocked a personal video!</div> 
+                        </div>
+                        <div class="modal-container-body-part personal-video-box">
+                            <div class="modal-video-overlay" id="unlockedVideoOverlay" onclick="playModalVideoPlayer(this)"></div>
+                            <iframe id="unlockedIframeVideo"
+                                width="100%" height="100%" src="https://www.youtube.com/embed/WLZjwyWPAA0"
+                                frameborder="0" allowfullscreen >
+                            </iframe>
+                            <video style="display: none;" id="unlockedVideoPlayer" class="section-video-main" autobuffer controls height="100%" width="100%">
+                                <source src="Content/video/msd.mp4" type="video/mp4" >
+                            </video>
+                        </div>
+                        <div class="align-c modal-container-btn personal-gift-btn">
+                            <div class="unlocked-quote-mess">How to motivate yourself in your daily life</div>
+                            <a href="javascript:void(0)" id="unlockedVideoPlayerBtn" onclick="playUnlockedVideo(this)" class="primary-btn blue-btn">Watch it now!</a>
+                            <div>
+                                <span onclick="closeModalVideoPlayer(this)" class="watch-later-btn">Watch later & continue</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    
+    <script src="Content/js/common.js"></script>
+    <script src="Content/js/modal-popup.js"></script>
+</body>
+</html>

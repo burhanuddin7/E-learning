@@ -1,0 +1,56 @@
+.section-container-heading {
+    color: #636363;
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 0 0 15px;
+}
+.section-container-box{
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: flex-start;
+    justify-content: flex-start;
+}
+.section-container-item{
+    width: 230px;
+    padding: 25px 20px 20px;
+    margin: 0 35px 35px 0px;
+}
+.section-container-item span{
+    display: block;
+}
+.section-container-item-count span{
+    display: inline-block;
+}
+.section-container-item-header {
+    font-size: 20px;
+    font-weight: 700;
+    padding: 0 0 5px;
+}
+.section-container-item-info {
+    padding: 0 0 10px;
+}
+.section-container-item-count.inactive span{color: rgba(0, 0, 0, .25);}
+.section-container-item-count{
+    text-align: right;
+}
+.section-container-tick-icon{
+    background-position: right;
+    background-size: contain;
+    height: 15px;
+    width: 100%;
+    text-align: right;
+}
+.section-container-lock-icon{
+    background-position: right;
+    background-size: contain;
+    height: 18px;
+    width: 100%;
+    text-align: right;
+}
+a.section-container-item:nth-child(3n){
+    margin: 0 0px 35px 0px;
+}
+.section-container-main.section-container-inactive{padding: 25px 0 40px;}

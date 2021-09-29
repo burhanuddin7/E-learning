@@ -1,0 +1,145 @@
+.section-video-container{
+    max-width: 760px;
+    height: 435px;
+    margin: auto;
+    position: relative;
+    background: #000;
+}
+.section-video-main{
+    outline: none;
+}
+.section-header-box.section-video-box .section-back-btn , .section-header-box.section-video-box .section-discussion-btn{
+    top: 0;
+    transform: translate(0%, 0%);
+}
+.section-video-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 760px;
+    height: 435px;
+    z-index: 8;
+    display: none;
+    background-color: rgba(0,0,0,0.7);
+}
+.section-video-buffer{
+    height: 100%;
+    cursor: pointer;
+    display: none;
+}
+.section-video-main-text{
+    padding: 15px 30px 60px 0px;
+    line-height: 1.4;
+    font-size: 19px;
+    color: rgba(0,0,0,.8);
+    max-width: 760px;
+    margin: auto;
+}
+.section-video-text-header{
+    color: #000;
+    font-size: 24px;
+    font-weight: 700;
+    padding: 0 0 10px;
+    text-transform: uppercase;
+}
+.section-video-arrow{
+    width: 0; 
+    height: 0; 
+    border-top: 25px solid transparent;
+    border-bottom: 25px solid transparent;
+    border-left: 50px solid #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.section-video-rating-info{
+    text-align: center;
+    padding: 80px 0px;
+}
+.section-video-message{
+    color: #fff;
+    text-align: center;
+    padding: 50px 50px 0;
+    font-size: 20px;
+    text-transform: uppercase;
+    line-height: 1.3;
+    letter-spacing: .5px;
+}
+.section-video-message-info{
+    font-size: 24px;
+    font-weight: 700;
+    padding: 5px 0 25px;
+}
+.section-video-next-info p{
+    font-size: 15px;
+    font-weight: 700;
+}
+.section-video-next-info img{
+    vertical-align: middle;
+    margin: 10px 0 15px;
+}
+.section-video-header{
+    color: #FFFFFF;
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 1.3;
+    padding: 0 0 20px;
+}
+.section-video-rating, .section-video-completion{
+    display: none;
+}
+.section-video-rating-list{
+    display: inline-block;
+    width: 20%;
+    font-size: 25px;
+    color: #fff;
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: .3px;
+}
+.section-video-rating-icon>span{
+    display: inline-block;
+    height: 80px;
+    width: 80px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 15px solid transparent;
+    box-sizing: content-box;
+    vertical-align: top;
+    cursor: pointer;
+    transition: .2s all linear;
+}
+.section-video-rating-selected>span{
+    background-color: #fff;
+    border: 15px solid #fff;
+}
+.section-video-rating-icon {
+    margin: 0 0 30px;
+}
+.rating-love-icon{
+    background-image: url(images/love-icon-white.svg);
+}
+.rating-like-icon{
+    background-image: url(images/like-icon-white.svg);
+}
+.rating-meh-icon{
+    background-image: url(images/meh-icon-white.svg);
+}
+.rating-dislike-icon{
+    background-image: url(images/didnt-like-icon-white.svg);
+}
+.section-video-rating-selected .rating-love-icon{
+    background-image: url(images/love-icon-black.svg);
+}
+.section-video-rating-selected .rating-like-icon{
+    background-image: url(images/like-icon-black.svg);
+}
+.section-video-rating-selected .rating-meh-icon{
+    background-image: url(images/meh-icon-black.svg);
+}
+.section-video-rating-selected .rating-dislike-icon{
+    background-image: url(images/didnt-like-icon-black.svg);
+}

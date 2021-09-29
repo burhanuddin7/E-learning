@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>E-Learning Application</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+        <link href="https://fonts.googleapis.com/css?family=Heebo:400,700&display=swap&subset=hebrew" rel="stylesheet">
+        <link rel="stylesheet" href="Content/Site.css">
+        <link rel="stylesheet" href="Content/survey.css">
+        <script src="Content/js/jquery-3.0.0.js"></script>
+    </head>
+<body>
+    <div class="page-wrapper">
+        <header class="navbar-container">
+            <div class="navbar-container-wrapper">
+                <div class="container" id="topbar">
+                    <div class="container-column navbar-wrapper">
+                        <div class="navbar-wrapper-info">
+                            <div class="navbar-logo"><a href="#"></a></div>
+                            <div class="navbar-notification">
+                                <span class="navbar-notification-icon"></span>
+                                <span class="navbar-notification-info">NOTIFICATIONS</span>
+                                <span class="navbar-notification-count">1</span>
+                            </div>
+                        </div>
+                        <div class="navbar-profile">
+                            <div>
+                                <img class="navbar-profile-logo" src="Content/images/dan.jpg"/>
+                                <span class="navbar-profile-name">Daniel</span>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>                                                                     
+        </header>
+        <div class="main-wrapper-panel">
+            <section class="container-highlight"></section>  
+            <div class="main-wrapper-panel-header">
+                <section class="container">
+                    <div class="container-column">
+                        <div class="section-header-main">
+                            <div class="section-header-box">
+                                <a href="#" class="section-back-btn"><span></span><span class="section-back-btn-text">Employee Motivation</span></a>
+                                <h2 class="section-header-text align-c">Final Quiz - Employee Motivation</h2>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="main-wrapper-panel-body">
+                <section class="container">
+                    <div class="container-column">
+                        <div class="survey-container-main">
+                            <div class="survey-container-wrapper">
+                                <div class="survey-container-item">
+                                    <div class="survey-container-item-number">1.</div>
+                                    <div class="survey-container-item-desc">
+                                        <div class="survey-container-item-question">What was your manager like when you argued with him?</div>
+                                        <div class="survey-container-item-answer">
+                                            <textarea class="survey-container-textarea" placeholder="Type your answer here"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="survey-container-item-result"></div>
+                                </div>
+
+                                <div class="survey-container-item">
+                                    <div class="survey-container-item-number">2.</div>
+                                    <div class="survey-container-item-desc">
+                                        <div class="survey-container-item-question">Is the management demotivating at your company?</div>
+                                        <div class="survey-container-item-answer">
+                                            <div class="survey-container-answer-main">
+                                                <div class="survey-response-radio">
+                                                    <label for="responseTrue">
+                                                        <input type="radio" name="userResponse" id="responseTrue">
+                                                        <span>True</span>
+                                                    </label>
+                                                </div>
+                                                <div class="survey-response-radio">
+                                                    <label for="responseFalse">
+                                                        <input type="radio" name="userResponse" id="responseFalse">
+                                                        <span>False</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="survey-container-item-result"></div>
+                                </div>
+
+                                <div class="survey-container-item">
+                                    <div class="survey-container-item-number">3.</div>
+                                    <div class="survey-container-item-desc">
+                                        <div class="survey-container-item-question">Which is the main aspect of motivational psychology?</div>
+                                        <div class="survey-container-item-answer">
+                                            <div class="survey-container-rating">
+                                                <ul id="dvRatingScaleQuestion" class="clearfix">
+                                                    <li class="survey-container-rank" title='Poor' data-value='1'>
+                                                        <span>1</span>
+                                                    </li>
+                                                    <li class="survey-container-rank" title='Fair' data-value='2'>
+                                                        <span>2</span>
+                                                    </li>
+                                                    <li class="survey-container-rank" title='Good' data-value='3'>
+                                                        <span>3</span>
+                                                    </li>
+                                                    <li class="survey-container-rank" title='Excellent' data-value='4'>
+                                                        <span>4</span>
+                                                    </li>
+                                                    <li class="survey-container-rank" title='WOW!!!' data-value='5'>
+                                                        <span>5</span>
+                                                    </li>
+                                                    <li class="survey-container-rank" title='WOW!!!' data-value='6'>
+                                                        <span>6</span>
+                                                    </li>
+                                                    <li class="survey-container-rank" title='WOW!!!' data-value='7'>
+                                                        <span>7</span>
+                                                    </li>
+                                                    <li class="survey-container-rank" title='WOW!!!' data-value='8'>
+                                                        <span>8</span>
+                                                    </li>
+                                                    <li class="survey-container-rank" title='WOW!!!' data-value='9'>
+                                                        <span>9</span>
+                                                    </li>
+                                                    <li class="survey-container-rank" title='WOW!!!' data-value='10'>
+                                                        <span>10</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="survey-container-item-result"></div>
+                                </div>
+
+                                <div class="survey-container-item">
+                                    <div class="survey-container-item-number">4.</div>
+                                    <div class="survey-container-item-desc">
+                                        <div class="survey-container-item-question">Which is the main aspect of motivational psychology?</div>
+                                        <div class="survey-container-item-answer">
+                                            <div class="survey-container-radio-wrapper">
+                                                <div class="radio-wrapper-box">
+                                                    <input id="dvradio1" name="motivation" type="radio">
+                                                    <label for="dvradio1" class="radio-wrapper-label">Incentive theory of motivation</label>
+                                                </div>
+                                                <div class="radio-wrapper-box">
+                                                    <input id="dvradio2" name="motivation" type="radio">
+                                                    <label for="dvradio2" class="radio-wrapper-label">Drive theory of motivation</label>
+                                                </div>
+                                                <div class="radio-wrapper-box">
+                                                    <input id="dvradio3" name="motivation" type="radio">
+                                                    <label for="dvradio3" class="radio-wrapper-label">Arousal theory of motivation</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="survey-container-item-result"></div>
+                                </div>
+
+                                <div class="survey-container-item card-disabled">
+                                    <div class="survey-container-item-number">5.</div>
+                                    <div class="survey-container-item-desc">
+                                        <div class="survey-container-item-question">Which is the main aspect of motivational psychology?</div>
+                                        <div class="survey-container-item-answer">
+                                            <div class="survey-container-radio-wrapper">
+                                                <div class="radio-wrapper-box">
+                                                    <input id="dvradio4" name="motivation1" type="radio">
+                                                    <label for="dvradio4" class="radio-wrapper-label">Incentive theory of motivation</label>
+                                                </div>
+                                                <div class="radio-wrapper-box">
+                                                    <input id="dvradio5" name="motivation1" type="radio">
+                                                    <label for="dvradio5" class="radio-wrapper-label">Drive theory of motivation</label>
+                                                </div>
+                                                <div class="radio-wrapper-box">
+                                                    <input id="dvradio6" name="motivation1" type="radio">
+                                                    <label for="dvradio6" class="radio-wrapper-label">Arousal theory of motivation</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="survey-container-item-result"></div>
+                                </div>
+
+                                <div class="survey-container-item survey-answer-wrong">
+                                    <div class="survey-container-item-number">6.</div>
+                                    <div class="survey-container-item-desc">
+                                        <div class="survey-container-item-question">Which is the main aspect of motivational psychology?</div>
+                                        <div class="survey-container-item-answer">
+                                            <div class="survey-container-radio-wrapper">
+                                                <div class="radio-wrapper-box">
+                                                    <input id="dvradio7" name="motivation2" type="radio">
+                                                    <label for="dvradio7" class="radio-wrapper-label">Incentive theory of motivation</label>
+                                                </div>
+                                                <div class="radio-wrapper-box">
+                                                    <input id="dvradio8" name="motivation2" type="radio" checked>
+                                                    <label for="dvradio8" class="radio-wrapper-label">Drive theory of motivation</label>
+                                                </div>
+                                                <div class="radio-wrapper-box">
+                                                    <input id="dvradio9" name="motivation2" type="radio">
+                                                    <label for="dvradio9" class="radio-wrapper-label">Arousal theory of motivation</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="survey-container-item-result"></div>
+                                </div>
+
+                                <div class="survey-container-item survey-answer-correct">
+                                    <div class="survey-container-item-number">7.</div>
+                                    <div class="survey-container-item-desc">
+                                        <div class="survey-container-item-question">Which is the main aspect of motivational psychology?</div>
+                                        <div class="survey-container-item-answer">
+                                            <div class="survey-container-radio-wrapper">
+                                                <div class="radio-wrapper-box">
+                                                    <input id="dvradio71" name="motivation3" type="radio">
+                                                    <label for="dvradio71" class="radio-wrapper-label">Incentive theory of motivation</label>
+                                                </div>
+                                                <div class="radio-wrapper-box">
+                                                    <input id="dvradio81" name="motivation3" type="radio" checked>
+                                                    <label for="dvradio81" class="radio-wrapper-label">Drive theory of motivation</label>
+                                                </div>
+                                                <div class="radio-wrapper-box">
+                                                    <input id="dvradio91" name="motivation3" type="radio">
+                                                    <label for="dvradio91" class="radio-wrapper-label">Arousal theory of motivation</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="survey-container-item-result"></div>
+                                </div>
+
+                                <div class="survey-container-item survey-answer-correct">
+                                    <div class="survey-container-item-number">8.</div>
+                                    <div class="survey-container-item-desc">
+                                        <div class="survey-container-item-question">Is the management demotivating at your company?</div>
+                                        <div class="survey-container-item-answer">
+                                            <div class="survey-container-answer-main">
+                                                <div class="survey-response-radio">
+                                                    <label for="responseTrue1">
+                                                        <input type="radio" name="userResponse1" id="responseTrue1">
+                                                        <span>True</span>
+                                                    </label>
+                                                </div>
+                                                <div class="survey-response-radio">
+                                                    <label for="responseFalse1">
+                                                        <input type="radio" name="userResponse1" id="responseFalse1" checked>
+                                                        <span>False</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="survey-container-item-result"></div>
+                                </div>
+
+                                <div class="survey-container-item">
+                                    <div class="survey-container-item-number">9.</div>
+                                    <div class="survey-container-item-desc">
+                                        <div class="survey-container-item-question">What are the most demotivating aspects of your company?</div>
+                                        <div class="survey-container-item-answer">
+                                            <div class="survey-container-answer-main">
+                                                <div class="survey-container-multiple-box">
+                                                    <div class="multiple-wrapper-box">
+                                                        <label for="dvCheckBox1" class="multiple-wrapper-label">
+                                                            <input id="dvCheckBox1" name="behavior" type="checkbox">
+                                                            <span>Collaegues are unfriendly</span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="multiple-wrapper-box">
+                                                        <label for="dvCheckBox2" class="multiple-wrapper-label">
+                                                            <input id="dvCheckBox2" name="behavior" type="checkbox">
+                                                            <span>Management do not care about the employees</span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="multiple-wrapper-box">
+                                                        <label for="dvCheckBox3" class="multiple-wrapper-label">
+                                                            <input id="dvCheckBox3" name="behavior" type="checkbox">
+                                                            <span>I don’t have enough free time</span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="multiple-wrapper-box">
+                                                        <label for="dvCheckBox4" class="multiple-wrapper-label">
+                                                            <input id="dvCheckBox4" name="behavior" type="checkbox">
+                                                            <span>There’s no free coffee in the office</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="survey-container-item-result"></div>
+                                </div>
+
+                                <div class="survey-container-button">
+                                    <a href="#" class="primary-btn transparent-btn">Take the test again!</a>
+                                    <a href="#" class="primary-btn blue-btn">Check answers</a>
+                                    <a href="#" class="primary-btn disabled-btn" style="display: none;">Check answers</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    
+    <script src="Content/js/questionaire.js"></script>
+</body>
+</html>

@@ -149,7 +149,7 @@ body{
     background-color: #000000;
 }
 .navbar-logo a{
-    background-image: url(images/logo.svg);
+    background-image: url(images/site-logo.svg);
     background-repeat: no-repeat;
     background-position: 0 0;
     background-size: contain;
